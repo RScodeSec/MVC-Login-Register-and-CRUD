@@ -12,6 +12,15 @@ class CientesController extends Cliente{
     {
         require  '../view/insertclient.php';
     }
+
+    public function DeleteInfoClient($id)
+    {
+        $this->id = $id;
+        $this->DeleteClient();
+        header("location: ./../view/admin.php");
+
+        
+    }
     
     public function SaveInforModel($dni,$nombres,$apellidos,$celular,$email,$ciudad,$direccion)
     {
@@ -29,6 +38,12 @@ class CientesController extends Cliente{
 
      
         
+    }
+
+    public function ListClientView()
+    {
+        $objetretornClients = $this->SearchAllClients();
+        require  '../view/viewCliente.php';
     }
 
 
@@ -55,6 +70,19 @@ if(isset($_POST['action']) && $_POST['action']=='insert')
         $_POST['direccion']);        
 
 
+}
+
+if(isset($_GET['action']) && $_GET['action']=='view')
+{
+    $instanciaClientes = new CientesController();
+    $instanciaClientes->ListClientView();
+}
+
+if(isset($_GET['action']) && $_GET['action']=='delete')
+{
+    $instanciaClientes = new CientesController();
+    $instanciaClientes->DeleteInfoClient($_GET['id']);
+    
 }
 
 

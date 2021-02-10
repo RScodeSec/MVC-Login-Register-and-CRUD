@@ -31,6 +31,26 @@ class Cliente{
        
     }
 
+    protected function SearchAllClients()
+    {
+        $ic = new Conexion();
+        $sql = "SELECT *FROM clients";
+        $insertar = $ic->db->prepare($sql);
+        $insertar->execute();
+        $objetretornClients = $insertar->fetchAll(PDO::FETCH_OBJ);
+        return $objetretornClients;
+
+
+    }
+
+    protected function DeleteClient()
+    {
+        $ic = new Conexion();
+        $sql = "DELETE FROM clients WHERE id='$this->id'";
+        $insertar = $ic->db->prepare($sql);
+        $insertar->execute();
+    }
+
 }
 
 ?>

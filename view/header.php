@@ -29,7 +29,7 @@
       
         <li><a class="active" href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="../controller/clienteController.php?action=insert">🔍Ver Clientes</a></li>
+        <li><a href="../controller/clienteController.php?action=view">🔍Ver Clientes</a></li>
         <li><a href="../controller/clienteController.php?action=insert">📔Añadir Cliente</a></li>
         <li><a href="../controller/userControllers.php?action=logout">Cerrar Sesion</a></li>               
         
