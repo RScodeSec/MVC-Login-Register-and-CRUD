@@ -5,15 +5,14 @@
     <meta charset="utf-8">
    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" />
+
+
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
-<script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
-<script src="semantic/dist/semantic.min.js"></script>
+    
 
   </head>
   <body>
@@ -30,8 +29,8 @@
       
         <li><a class="active" href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Crud</a></li>
+        <li><a href="../controller/clienteController.php?action=insert">🔍Ver Clientes</a></li>
+        <li><a href="../controller/clienteController.php?action=insert">📔Añadir Cliente</a></li>
         <li><a href="../controller/userControllers.php?action=logout">Cerrar Sesion</a></li>               
         
             
