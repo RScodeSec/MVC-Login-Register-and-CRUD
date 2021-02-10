@@ -27,11 +27,11 @@
 				<input type="hidden" name="action" value="login">
 				<div class="group">
 					<label for="user" class="label">Usuario</label>
-					<input id="user" name="user" type="text" class="input">
+					<input id="user" name="user" type="text" class="input" value="admin" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Contraseña</label>
-					<input id="pass" name="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="pass" type="password" class="input" data-type="password" value="admin" required>
 				</div>
                 <br>
 				
@@ -52,20 +52,20 @@
 
 				<div class="group">
 					<label for="nombres" class="label">Nombres</label>
-					<input id="nombres" name="nombres" type="text" class="input" >
+					<input id="nombres" name="nombres" type="text" class="input" placeholder=" Ingrese su Nombre Completo" pattern="[a-zA-Z ]{2,254}" title="Solo debe contener letras. e.g. john" required>
 				</div>	
 				<div class="group">
 					<label for="user" class="label">Usuario</label>
-					<input id="user"  name="user" type="text" class="input">
+					<input id="user"  name="user" type="text" class="input" placeholder=" Ingrese su Nombre de Usuario" pattern="[a-zA-Z0-9 ]{2,254}" title=" e.g. john" required>
 				</div>
 				<div class="group">
 					<label for="pass" class="label">Contraseña</label>
-					<input id="pass" name="pass" type="password" class="input" data-type="password">
+					<input id="pass" name="pass" type="password" class="input" data-type="password" required>
 				</div>
 				
 				<div class="group">
 					<label for="email" class="label">Email</label>
-					<input id="email"  name="email" type="text" class="input">
+					<input id="email"  name="email" type="email" class="input" placeholder=" Ingrese su Nombre de Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="e.g. aso@gmail.com" required >
 				</div>
 				<div class="group">
 					<input type="submit" class="button" value="Crear Cuenta">

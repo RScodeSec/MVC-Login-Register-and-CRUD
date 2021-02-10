@@ -27,7 +27,7 @@ class CientesController extends Cliente{
         $this->ciudad = $ciudad;        
         $this->direccion = $direccion;
         $this->InsertClienteUpdateFinal();
-        header("location: ./../view/viewCliente.php");
+        header("location: ./../view/admin.php");
         
     }
 
@@ -95,8 +95,8 @@ if(isset($_POST['action']) && $_POST['action']=='insert')
         $_POST['dni'],
         $_POST['nombres'],
         $_POST['apellidos'],
-        $_POST['email'],
         $_POST['celular'],
+        $_POST['email'],        
         $_POST['ciudad'],
         $_POST['direccion']);        
 
@@ -133,8 +133,8 @@ if(isset($_POST['action']) && $_POST['action']=='update')
         $_POST['dni'],
         $_POST['nombres'],
         $_POST['apellidos'],
-        $_POST['email'],
         $_POST['celular'],
+        $_POST['email'],        
         $_POST['ciudad'],
         $_POST['direccion']);        
 

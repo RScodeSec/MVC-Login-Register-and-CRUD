@@ -22,7 +22,7 @@
       <label for="check" class="checkbtn">
         <i class="fas fa-bars"></i>
       </label>
-      <label class="logo">DesignX</label>
+      <label class="logo">NEON HOUSE LED</label>
       
       
       <ul>

@@ -14,10 +14,11 @@ if(empty($_SESSION['username'])){
 //
 
 ?>
+<br>
+<div class="container-fluid">
 
-<h1><?php echo $_SESSION['username']; ?></h1>
-<h1><?php echo $_SESSION['nombres']; ?></h1>
-<h1><?php echo $_SESSION['rol']; ?></h1>
-<h1>haaaaaaaaaaaaaaaaaaaaaa</h1>
+<h1>BIENVENIDO !!... @RsCodeSec</h1>
+
+</div>
 
 

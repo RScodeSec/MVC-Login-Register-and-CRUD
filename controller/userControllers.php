@@ -42,6 +42,7 @@ class UsuarioController extends Usuario{
         $this->username = $username;
         $this->passwords = $password;
         $infoUsuario = $this->SearchUsuario();
+        
         foreach($infoUsuario as $usuario){}
         if(password_verify($password,$usuario->passwords)){
 
@@ -54,7 +55,8 @@ class UsuarioController extends Usuario{
         }
         else
         {
-            echo "no concuerda";
+            header("location: ./../index.php");
+            echo "<p>Esta es mi quinta frase hecha con Php!</p>";
 
         }
         

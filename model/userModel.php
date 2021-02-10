@@ -46,32 +46,6 @@ class Usuario{
 
 
 
-    /*private $db;
-    private $usuarios;
-
-    public function __construct(){
-        $this->db = Conectar::conexion();
-        $this->usuarios = array();
-    }
-    //this is part of crud
-    public function get_usuario()
-    {
-        $sql = "SELECT *FROM users";
-        $resultado = $this->db->query($sql);
-        while($row = $resultado->fech_assoc()){
-
-
-            $this->usuarios[]= $row;
-            return $this->usuarios;
-        }
-
-
-
-
-
-    }*/
-
-
 
 }
 

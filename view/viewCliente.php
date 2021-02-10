@@ -8,6 +8,7 @@ if(empty($_SESSION['username'])){
     $redirect->redireccionar();
 }
 ?>
+<h2 class="center"> BIENBENIDO AL AREA DE EDICION DE CLIENTES</h2>
 
 
 
@@ -64,3 +65,4 @@ if(empty($_SESSION['username'])){
     </div>
   </div>
 </div>
+
