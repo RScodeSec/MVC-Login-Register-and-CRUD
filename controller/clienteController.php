@@ -13,6 +13,37 @@ class CientesController extends Cliente{
         require  '../view/insertclient.php';
     }
 
+    //TO OBTAIN FROM MYSQL ----------------------------------------------------------------
+    //---------------------------------------------------------------------------------
+
+    public function SaveInforModelUpdateFinal($id,$dni,$nombres,$apellidos,$celular,$email,$ciudad,$direccion)
+    {
+        $this->id = $id;
+        $this->dni = $dni;
+        $this->nombres = $nombres;
+        $this->apellidos = $apellidos;        
+        $this->celular = $celular;
+        $this->email = $email;
+        $this->ciudad = $ciudad;        
+        $this->direccion = $direccion;
+        $this->InsertClienteUpdateFinal();
+        header("location: ./../view/viewCliente.php");
+        
+    }
+
+
+
+    //TO OBTAIN FROM MYSQL---------------------------------
+    //-------------------------------------------------------------------------------------
+
+    public function UpdateInfoClient($id)
+    {
+        $this->id = $id;        
+        $objetretornClientsUpdate = $this->SearchAllClientUpdate();
+        require  '../view/updateClient.php';
+
+    }
+
     public function DeleteInfoClient($id)
     {
         $this->id = $id;
@@ -42,7 +73,7 @@ class CientesController extends Cliente{
 
     public function ListClientView()
     {
-        $objetretornClients = $this->SearchAllClients();
+        $objetretornClient = $this->SearchAllClients();
         require  '../view/viewCliente.php';
     }
 
@@ -83,6 +114,31 @@ if(isset($_GET['action']) && $_GET['action']=='delete')
     $instanciaClientes = new CientesController();
     $instanciaClientes->DeleteInfoClient($_GET['id']);
     
+}
+
+if(isset($_GET['action']) && $_GET['action']=='update')
+{
+    $instanciaClientes = new CientesController();
+    $instanciaClientes->UpdateInfoClient($_GET['id']);
+    
+}
+
+
+if(isset($_POST['action']) && $_POST['action']=='update')
+{
+    $instanciaClientes = new CientesController();
+    
+    $instanciaClientes->SaveInforModelUpdateFinal(
+        $_POST['id'],
+        $_POST['dni'],
+        $_POST['nombres'],
+        $_POST['apellidos'],
+        $_POST['email'],
+        $_POST['celular'],
+        $_POST['ciudad'],
+        $_POST['direccion']);        
+
+
 }
 
 

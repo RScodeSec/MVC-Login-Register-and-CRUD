@@ -33,7 +33,7 @@ if(empty($_SESSION['username'])){
           </tr>
         </thead>
         <tbody>
-        <?php foreach($objetretornClients as $user) {?>
+        <?php foreach($objetretornClient as $user) {?>
           <tr>
            
            <td><?php echo $user->id?></td>
@@ -48,7 +48,7 @@ if(empty($_SESSION['username'])){
            <!-- aqui va toda la info-->           
            <td class="text-center">
              <div class="btn-group">
-                <a href="edit_user.php?id=<?php echo $user->id;?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
+                <a href="../controller/clienteController.php?action=update&id=<?php echo $user->id;?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
                   <i class="edit icon"></i>
                </a>
                 <a href="../controller/clienteController.php?action=delete&id=<?php echo $user->id;?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Eliminar">

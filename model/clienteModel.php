@@ -51,6 +51,27 @@ class Cliente{
         $insertar->execute();
     }
 
+    protected function SearchAllClientUpdate()
+    {
+        $ic = new Conexion();
+        $sql = "SELECT *FROM clients";
+        $insertar = $ic->db->prepare($sql);
+        $insertar->execute();
+        $objetretornClientsUpdate = $insertar->fetchAll(PDO::FETCH_OBJ);
+        return $objetretornClientsUpdate;
+        
+    }
+    //-----------------------------------------------------------------------------------
+    //--------------------------------------------------------------------------------
+    //----------------------FINAL UPDATE------------------------------------------
+    protected function InsertClienteUpdateFinal()
+    {
+        $ic = new Conexion();
+        $sql = "UPDATE clients SET dni='$this->dni',nombres='$this->nombres',apellidos='$this->apellidos',celular='$this->celular',email='$this->email',ciudad='$this->ciudad',direccion='$this->direccion' WHERE id='$this->id'";
+        $insertar = $ic->db->prepare($sql);
+        $insertar->execute();
+    }
+
 }
 
 ?>
